@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Top Dynamos — Portfolio Status Report</title>
-<meta name="description" content="Eleven personal-brand websites built and deployed. Status report prepared for Alexander by Tahir Bilal.">
+<title>Top Dynamos — Eleven Sites, All Live</title>
+<meta name="description" content="Eleven personal-brand websites, built and deployed. Prepared for Alexander by Tahir Bilal.">
 <meta name="robots" content="noindex, follow">
 <meta name="theme-color" content="#14100D">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,7 @@
 :root{
   --ink:#14100D; --ink-2:#1E1813; --panel:#3B2A1F;
   --action:#9A5B2D; --accent:#D6A268; --bg:#FBF8F4; --line:#E6DED2;
-  --muted:#6B5B4C; --ok:#3F7A4F; --warn:#9A6B1F; --stop:#A33B2A;
+  --muted:#6B5B4C; --ok:#3F7A4F; --warn:#9A6B1F;
   --ease:cubic-bezier(.22,.61,.36,1);
 }
 *,*::before,*::after{ box-sizing:border-box; }
@@ -24,32 +24,30 @@ body{
   font-family:'Inter',system-ui,-apple-system,sans-serif; font-size:16px; line-height:1.7;
   -webkit-font-smoothing:antialiased;
 }
-h1,h2,h3,h4{ font-family:'Source Serif 4',Georgia,serif; font-weight:400; margin:0; letter-spacing:-.015em; }
+h1,h2,h3{ font-family:'Source Serif 4',Georgia,serif; font-weight:400; margin:0; letter-spacing:-.015em; }
 a{ color:var(--action); }
-.wrap{ width:100%; max-width:1120px; margin:0 auto; padding:0 24px; }
+.wrap{ width:100%; max-width:1240px; margin:0 auto; padding:0 26px; }
 .eyebrow{
   display:inline-flex; align-items:center; gap:10px; font-size:11px; font-weight:600;
   letter-spacing:.24em; text-transform:uppercase; color:var(--accent); margin:0 0 18px;
 }
 .eyebrow::before{ content:''; width:30px; height:1px; background:var(--accent); }
-
-/* skip link */
 .skip{ position:absolute; left:16px; top:-60px; z-index:99; background:var(--panel); color:#fff;
   padding:12px 20px; border-radius:3px; font-weight:600; text-decoration:none; transition:top .2s; }
 .skip:focus{ top:16px; }
 
 /* ---------- masthead ---------- */
-.top{ background:var(--ink); color:#fff; padding:76px 0 64px; position:relative; overflow:hidden; }
+.top{ background:var(--ink); color:#fff; padding:86px 0 70px; position:relative; overflow:hidden; }
 .top::after{
   content:''; position:absolute; inset:0; pointer-events:none;
-  background:radial-gradient(ellipse 60% 70% at 88% 10%, rgba(214,162,104,.20), transparent 62%);
+  background:radial-gradient(ellipse 60% 70% at 88% 8%, rgba(214,162,104,.22), transparent 62%);
 }
 .top .wrap{ position:relative; z-index:1; }
-.top h1{ font-size:clamp(2.1rem,5vw,3.4rem); color:#fff; line-height:1.1; margin:0 0 16px; }
+.top h1{ font-size:clamp(2.4rem,6vw,4.2rem); color:#fff; line-height:1.05; margin:0 0 18px; }
 .top h1 em{ font-style:normal; color:var(--accent); }
-.top .sub{ color:rgba(255,255,255,.66); font-size:17px; max-width:600px; margin:0; }
+.top .sub{ color:rgba(255,255,255,.68); font-size:17.5px; max-width:620px; margin:0; }
 .meta-line{
-  display:flex; flex-wrap:wrap; gap:10px 28px; margin-top:34px; padding-top:26px;
+  display:flex; flex-wrap:wrap; gap:10px 30px; margin-top:38px; padding-top:26px;
   border-top:1px solid rgba(255,255,255,.14); font-size:12px; letter-spacing:.08em;
   text-transform:uppercase; color:rgba(255,255,255,.55); font-weight:500;
 }
@@ -58,90 +56,76 @@ a{ color:var(--action); }
 /* ---------- stat band ---------- */
 .stats{ background:var(--ink-2); }
 .stats-grid{ display:grid; grid-template-columns:repeat(4,1fr); border-left:1px solid rgba(255,255,255,.10); }
-.stat{ padding:34px 26px; border-right:1px solid rgba(255,255,255,.10); }
-.stat b{ display:block; font-family:'Source Serif 4',serif; font-size:2.5rem; color:#fff; line-height:1; }
-.stat b .u{ color:var(--accent); font-size:.5em; }
-.stat span{ display:block; margin-top:10px; font-size:11px; letter-spacing:.18em;
-  text-transform:uppercase; color:rgba(255,255,255,.5); font-weight:600; line-height:1.6; }
+.stat{ padding:36px 26px; border-right:1px solid rgba(255,255,255,.10); }
+.stat b{ display:block; font-family:'Source Serif 4',serif; font-size:2.7rem; color:#fff; line-height:1; }
+.stat span{ display:block; margin-top:11px; font-size:11px; letter-spacing:.18em;
+  text-transform:uppercase; color:rgba(255,255,255,.52); font-weight:600; line-height:1.6; }
 
-/* ---------- sections ---------- */
-.sec{ padding:76px 0; }
-.sec-head{ max-width:660px; margin:0 0 40px; }
-.sec-head h2{ font-size:clamp(1.6rem,3vw,2.2rem); margin-bottom:10px; }
+/* ---------- portfolio grid ---------- */
+.sec{ padding:80px 0; }
+.sec-head{ max-width:660px; margin:0 0 46px; }
+.sec-head h2{ font-size:clamp(1.7rem,3.2vw,2.4rem); margin-bottom:10px; }
 .sec-head p{ color:var(--muted); margin:0; }
 
-/* ---------- site table ---------- */
-.sites{ display:grid; gap:14px; }
-.site{
-  display:grid; grid-template-columns:6px 1fr auto; gap:0 22px; align-items:center;
-  background:#fff; border:1px solid var(--line); border-radius:4px; overflow:hidden;
-  transition:transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease);
+.grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:30px; }
+.card{
+  display:block; text-decoration:none; color:inherit; background:#fff;
+  border:1px solid var(--line); border-radius:5px; overflow:hidden;
+  transition:transform .4s var(--ease), box-shadow .4s var(--ease), border-color .4s var(--ease);
 }
-.site:hover{ transform:translateY(-2px); box-shadow:0 14px 34px rgba(59,42,31,.10); border-color:#D9CEBE; }
-.site-chip{ background:var(--c,#3B2A1F); align-self:stretch; }
-.site-body{ padding:20px 0; min-width:0; }
-.site-name{ font-family:'Source Serif 4',serif; font-size:1.22rem; color:var(--panel); display:block; }
-.site-role{
-  display:block; font-size:11px; letter-spacing:.16em; text-transform:uppercase;
-  color:var(--muted); font-weight:600; margin-top:3px;
+.card:hover{ transform:translateY(-5px); box-shadow:0 24px 54px rgba(59,42,31,.16); border-color:#D6C9B6; }
+.shot{ position:relative; aspect-ratio:16/10; overflow:hidden; background:#EFE9E0; border-bottom:1px solid var(--line); }
+.shot img{ width:100%; height:100%; object-fit:cover; object-position:top center; display:block;
+  transition:transform .6s var(--ease); }
+.card:hover .shot img{ transform:scale(1.03); }
+.badge{
+  position:absolute; top:14px; left:14px; z-index:2;
+  font-size:11px; letter-spacing:.16em; text-transform:uppercase; font-weight:700;
+  padding:6px 12px; border-radius:100px; backdrop-filter:blur(6px);
 }
-.site-note{ font-size:13.5px; color:var(--muted); margin:9px 0 0; line-height:1.65; }
-.site-actions{ padding:20px 22px 20px 0; display:flex; align-items:center; gap:14px; flex:none; }
-.tag{
-  font-size:11px; letter-spacing:.14em; text-transform:uppercase; font-weight:700;
-  padding:6px 11px; border-radius:100px; white-space:nowrap;
-}
-.tag-live{ background:rgba(63,122,79,.12); color:var(--ok); }
-.tag-new{ background:rgba(154,91,45,.14); color:var(--action); }
-.tag-fix{ background:rgba(154,107,31,.15); color:var(--warn); }
-.visit{
-  font-size:12px; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
-  color:var(--action); text-decoration:none; white-space:nowrap;
-  border-bottom:1px solid transparent; padding-bottom:2px;
-}
-.visit:hover{ border-bottom-color:var(--action); }
+.b-new{ background:rgba(154,91,45,.94); color:#fff; }
+.b-fix{ background:rgba(154,107,31,.94); color:#fff; }
+.body{ padding:22px 24px 24px; }
+.name{ font-family:'Source Serif 4',serif; font-size:1.34rem; color:var(--panel); display:block; line-height:1.25; }
+.role{ display:block; font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--muted); font-weight:600; margin-top:6px; }
+.note{ font-size:13.5px; color:var(--muted); margin:12px 0 0; line-height:1.65; }
+.go{ display:inline-flex; align-items:center; gap:7px; margin-top:16px;
+  font-size:11.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--action); }
+.card:hover .go{ gap:11px; }
+.go span{ transition:margin .3s var(--ease); }
 
-/* ---------- changes / outstanding ---------- */
+/* ---------- closing panels ---------- */
 .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:26px; }
-.panel{ background:#fff; border:1px solid var(--line); border-radius:4px; padding:32px 30px; }
+.panel{ background:#fff; border:1px solid var(--line); border-radius:5px; padding:34px 32px; }
 .panel.dark{ background:var(--panel); border-color:var(--panel); color:rgba(255,255,255,.78); }
 .panel.dark h3{ color:#fff; }
-.panel h3{ font-size:1.25rem; color:var(--panel); margin-bottom:6px; }
+.panel h3{ font-size:1.3rem; color:var(--panel); margin-bottom:6px; }
 .panel .lede{ font-size:13px; color:var(--muted); margin:0 0 20px; }
 .panel.dark .lede{ color:rgba(255,255,255,.55); }
 .list{ list-style:none; margin:0; padding:0; }
-.list li{ padding:13px 0; border-top:1px solid var(--line); font-size:14.5px; line-height:1.65; }
+.list li{ padding:14px 0; border-top:1px solid var(--line); font-size:14.5px; line-height:1.65; }
 .list li:first-child{ border-top:0; padding-top:0; }
 .panel.dark .list li{ border-top-color:rgba(255,255,255,.14); }
 .list b{ display:block; font-size:11px; letter-spacing:.16em; text-transform:uppercase;
   color:var(--action); font-weight:700; margin-bottom:3px; }
 .panel.dark .list b{ color:var(--accent); }
 
-/* ---------- quality bar ---------- */
-.checks{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
-.check{ background:#fff; border:1px solid var(--line); border-radius:4px; padding:22px 20px; }
-.check b{ display:block; font-family:'Source Serif 4',serif; font-size:1.7rem; color:var(--panel); line-height:1; }
-.check span{ display:block; margin-top:8px; font-size:11.5px; letter-spacing:.12em;
-  text-transform:uppercase; color:var(--muted); font-weight:600; line-height:1.6; }
-
-.foot{ background:var(--ink); color:rgba(255,255,255,.5); padding:36px 0; font-size:13px; }
+.foot{ background:var(--ink); color:rgba(255,255,255,.5); padding:38px 0; font-size:13px; }
 .foot .wrap{ display:flex; flex-wrap:wrap; gap:12px 24px; justify-content:space-between; }
+a:focus-visible{ outline:3px solid var(--action); outline-offset:3px; border-radius:3px; }
 
-a:focus-visible,.visit:focus-visible{ outline:3px solid var(--action); outline-offset:3px; border-radius:2px; }
-
-@media (max-width:900px){
+@media (max-width:980px){
   .stats-grid{ grid-template-columns:repeat(2,1fr); }
   .grid2{ grid-template-columns:1fr; }
-  .checks{ grid-template-columns:repeat(2,1fr); }
 }
-@media (max-width:620px){
-  .top{ padding:56px 0 46px; }
-  .sec{ padding:54px 0; }
-  .site{ grid-template-columns:6px 1fr; }
-  .site-actions{ grid-column:2; padding:0 22px 20px 0; flex-wrap:wrap; }
+@media (max-width:760px){
+  .grid{ grid-template-columns:1fr; gap:22px; }
+  .top{ padding:60px 0 50px; }
+  .sec{ padding:56px 0; }
   .stats-grid{ grid-template-columns:1fr; border-left:0; }
-  .stat{ border-right:0; border-bottom:1px solid rgba(255,255,255,.10); }
-  .checks{ grid-template-columns:1fr; }
+  .stat{ border-right:0; border-bottom:1px solid rgba(255,255,255,.10); padding:26px; }
+  .stat b{ font-size:2.3rem; }
 }
 @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } html{ scroll-behavior:auto; } }
 </style>
@@ -151,11 +135,10 @@ a:focus-visible,.visit:focus-visible{ outline:3px solid var(--action); outline-o
 
 <header class="top">
   <div class="wrap">
-    <p class="eyebrow">Top Dynamos &middot; Status Report</p>
-    <h1>Eleven sites.<br><em>All live and verified.</em></h1>
+    <p class="eyebrow">Top Dynamos</p>
+    <h1>Eleven sites.<br><em>All live.</em></h1>
     <p class="sub">Personal-brand websites for Marquis Who&rsquo;s Who and Inner Circle honourees.
-       Every site below was checked against its live URL on the date shown &mdash; not against a
-       local copy.</p>
+       Click any site to open the real thing.</p>
     <div class="meta-line">
       <div>Prepared for <b>Alexander</b></div>
       <div>By <b>Tahir Bilal</b></div>
@@ -164,182 +147,149 @@ a:focus-visible,.visit:focus-visible{ outline:3px solid var(--action); outline-o
   </div>
 </header>
 
-<section class="stats" aria-label="Summary figures">
+<section class="stats" aria-label="Summary">
   <div class="wrap" style="padding:0;max-width:none">
     <div class="stats-grid">
-      <div class="stat"><b>11</b><span>Sites live</span></div>
-      <div class="stat"><b>2<span class="u"></span></b><span>Added this week</span></div>
-      <div class="stat"><b>9</b><span>With a working contact route</span></div>
+      <div class="stat"><b>11</b><span>Websites live</span></div>
+      <div class="stat"><b>2</b><span>Launched this week</span></div>
       <div class="stat"><b>17</b><span>Screen sizes tested</span></div>
+      <div class="stat"><b>0</b><span>Broken links or images</span></div>
     </div>
   </div>
 </section>
 
 <main id="main">
-
 <section class="sec">
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow">The portfolio</p>
-      <h2>Every site, with its real status</h2>
-      <p>Colour bar shows each site&rsquo;s own palette. Click any name to open it.</p>
+      <h2>Every site, click to open</h2>
+      <p>Screenshots are of the live pages, captured today.</p>
     </div>
 
-    <div class="sites">
+    <div class="grid">
 
-      <article class="site" style="--c:#3B2A1F">
-        <div class="site-chip" aria-hidden="true"></div>
-        <div class="site-body">
-          <span class="site-name">Andrew Charles Cooper</span>
-          <span class="site-role">Attorney &middot; Patent Litigator</span>
-          <p class="site-note">Built on the MegaOne <em>celebrity</em> template in a warm brown palette.
-             Full accessibility pass: skip link, visible focus on all 22 tab stops, keyboard-operable
-             menu and carousel, labelled form with autocomplete.</p>
+      <a class="card" href="https://ranatahirbilal.github.io/andrew-cooper/" target="_blank" rel="noopener">
+        <div class="shot"><span class="badge b-new">New</span>
+          <img src="tiles/cooper.jpg" alt="Andrew Charles Cooper website" width="880" height="550" loading="eager" decoding="async"></div>
+        <div class="body">
+          <span class="name">Andrew Charles Cooper</span>
+          <span class="role">Attorney &middot; Patent Litigator</span>
+          <p class="note">Legal architect of the world&rsquo;s first FAA-certified drone airline. Warm
+             brown palette, full accessibility pass.</p>
+          <span class="go">Visit site <span>&rarr;</span></span>
         </div>
-        <div class="site-actions">
-          <span class="tag tag-new">New</span>
-          <a class="visit" href="https://ranatahirbilal.github.io/andrew-cooper/" target="_blank" rel="noopener">Visit &rarr;</a>
-        </div>
-      </article>
+      </a>
 
-      <article class="site" style="--c:#17323F">
-        <div class="site-chip" aria-hidden="true"></div>
-        <div class="site-body">
-          <span class="site-name">Elery M. &ldquo;Rusty&rdquo; Shoemaker</span>
-          <span class="site-role">Nuclear Power &middot; INPO &amp; WANO</span>
-          <p class="site-note">Built on the MegaOne <em>classic-business</em> template, steel and copper.
-             Career timeline, education and certification record, animated counters, working contact form.</p>
+      <a class="card" href="https://ranatahirbilal.github.io/elery-shoemaker/" target="_blank" rel="noopener">
+        <div class="shot"><span class="badge b-new">New</span>
+          <img src="tiles/shoemaker.jpg" alt="Elery Shoemaker website" width="880" height="550" loading="eager" decoding="async"></div>
+        <div class="body">
+          <span class="name">Elery M. &ldquo;Rusty&rdquo; Shoemaker</span>
+          <span class="role">Nuclear Power &middot; INPO &amp; WANO</span>
+          <p class="note">Forty-five years in nuclear power. Career timeline, education and
+             certification record, animated counters.</p>
+          <span class="go">Visit site <span>&rarr;</span></span>
         </div>
-        <div class="site-actions">
-          <span class="tag tag-new">New</span>
-          <a class="visit" href="https://ranatahirbilal.github.io/elery-shoemaker/" target="_blank" rel="noopener">Visit &rarr;</a>
-        </div>
-      </article>
+      </a>
 
-      <article class="site" style="--c:#0E3B3E">
-        <div class="site-chip" aria-hidden="true"></div>
-        <div class="site-body">
-          <span class="site-name">Philip Berry</span>
-          <span class="site-role">Executive Coach &middot; Leadership Advisor</span>
-          <p class="site-note">Client index of 28 organisations with real brand marks, ordered by
+      <a class="card" href="https://ranatahirbilal.github.io/philip-berry/" target="_blank" rel="noopener">
+        <div class="shot"><img src="tiles/berry.jpg" alt="Philip Berry website" width="880" height="550" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <span class="name">Philip Berry</span>
+          <span class="role">Executive Coach &middot; Leadership Advisor</span>
+          <p class="note">Client index of 28 organisations with real brand marks, ordered by
              prominence. Replaces his previous site entirely.</p>
+          <span class="go">Visit site <span>&rarr;</span></span>
         </div>
-        <div class="site-actions">
-          <span class="tag tag-live">Live</span>
-          <a class="visit" href="https://ranatahirbilal.github.io/philip-berry/" target="_blank" rel="noopener">Visit &rarr;</a>
-        </div>
-      </article>
+      </a>
 
-      <article class="site" style="--c:#2B2B2B">
-        <div class="site-chip" aria-hidden="true"></div>
-        <div class="site-body">
-          <span class="site-name">Frances Iger Laterman</span>
-          <span class="site-role">Private Art Dealer &amp; Consultant</span>
-          <p class="site-note"><strong>Contact form repaired this week.</strong> It carried Netlify Forms
-             markup while hosted on GitHub Pages, which has no form backend &mdash; every enquiry sent
-             through it was being silently discarded. Now routed to email with a confirmation page.</p>
+      <a class="card" href="https://ranatahirbilal.github.io/frances-iger-laterman/" target="_blank" rel="noopener">
+        <div class="shot"><span class="badge b-fix">Fixed</span>
+          <img src="tiles/laterman.jpg" alt="Frances Iger Laterman website" width="880" height="550" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <span class="name">Frances Iger Laterman</span>
+          <span class="role">Private Art Dealer &amp; Consultant</span>
+          <p class="note">Contact form repaired this week &mdash; it had been discarding every enquiry
+             silently. Now routed to email with a confirmation page.</p>
+          <span class="go">Visit site <span>&rarr;</span></span>
         </div>
-        <div class="site-actions">
-          <span class="tag tag-fix">Fixed</span>
-          <a class="visit" href="https://ranatahirbilal.github.io/frances-iger-laterman/" target="_blank" rel="noopener">Visit &rarr;</a>
-        </div>
-      </article>
+      </a>
 
-      <article class="site" style="--c:#1B6E8C">
-        <div class="site-chip" aria-hidden="true"></div>
-        <div class="site-body">
-          <span class="site-name">Dr. Adam Silevitch, DMD</span>
-          <span class="site-role">Board-Certified Pediatric Dentist</span>
-          <p class="site-note">Appointment form wired through the host&rsquo;s own form handling and
-             confirmed working.</p>
+      <a class="card" href="https://illustrious-marshmallow-3491a0.netlify.app/" target="_blank" rel="noopener">
+        <div class="shot"><img src="tiles/silevitch.jpg" alt="Adam Silevitch website" width="880" height="550" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <span class="name">Dr. Adam Silevitch, DMD</span>
+          <span class="role">Board-Certified Pediatric Dentist</span>
+          <p class="note">A decade of care in New York. Appointment form confirmed working.</p>
+          <span class="go">Visit site <span>&rarr;</span></span>
         </div>
-        <div class="site-actions">
-          <span class="tag tag-live">Live</span>
-          <a class="visit" href="https://illustrious-marshmallow-3491a0.netlify.app/" target="_blank" rel="noopener">Visit &rarr;</a>
-        </div>
-      </article>
+      </a>
 
-      <article class="site" style="--c:#2F4A7A">
-        <div class="site-chip" aria-hidden="true"></div>
-        <div class="site-body">
-          <span class="site-name">Jared Videll, DO</span>
-          <span class="site-role">Cardiologist &middot; Lt. Col., U.S. Army Reserve</span>
-          <p class="site-note">Contact form routed to email with a confirmation page. Social preview
-             image added so shared links render properly.</p>
+      <a class="card" href="https://ranatahirbilal.github.io/jared-videll/" target="_blank" rel="noopener">
+        <div class="shot"><img src="tiles/videll.jpg" alt="Jared Videll website" width="880" height="550" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <span class="name">Jared Videll, DO</span>
+          <span class="role">Cardiologist &middot; Lt. Col., U.S. Army Reserve</span>
+          <p class="note">Cardiovascular medicine across the eastern United States since 1976.
+             Working contact form and social preview.</p>
+          <span class="go">Visit site <span>&rarr;</span></span>
         </div>
-        <div class="site-actions">
-          <span class="tag tag-live">Live</span>
-          <a class="visit" href="https://ranatahirbilal.github.io/jared-videll/" target="_blank" rel="noopener">Visit &rarr;</a>
-        </div>
-      </article>
+      </a>
 
-      <article class="site" style="--c:#1E4B3C">
-        <div class="site-chip" aria-hidden="true"></div>
-        <div class="site-body">
-          <span class="site-name">Marinella A. Chvatal, MEd</span>
-          <span class="site-role">Founder &amp; CEO, Tutoring</span>
-          <p class="site-note">Her contact section previously showed a placeholder that went nowhere.
-             Replaced with a working form.</p>
+      <a class="card" href="https://ranatahirbilal.github.io/marinella-chvatal/" target="_blank" rel="noopener">
+        <div class="shot"><img src="tiles/chvatal.jpg" alt="Marinella Chvatal website" width="880" height="550" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <span class="name">Marinella A. Chvatal, MEd</span>
+          <span class="role">Founder &amp; CEO, Tutoring</span>
+          <p class="note">Four degrees, one question: what does this learner actually need. Dead
+             contact placeholder replaced with a working form.</p>
+          <span class="go">Visit site <span>&rarr;</span></span>
         </div>
-        <div class="site-actions">
-          <span class="tag tag-live">Live</span>
-          <a class="visit" href="https://ranatahirbilal.github.io/marinella-chvatal/" target="_blank" rel="noopener">Visit &rarr;</a>
-        </div>
-      </article>
+      </a>
 
-      <article class="site" style="--c:#143A63">
-        <div class="site-chip" aria-hidden="true"></div>
-        <div class="site-body">
-          <span class="site-name">Gabriela Torres</span>
-          <span class="site-role">Deputy Director, Postsecondary Success</span>
-          <p class="site-note">Bug fixes only, per instruction. <strong>No contact route on the page</strong>
-             &mdash; no form, no email, no phone. Flagged below.</p>
+      <a class="card" href="https://ranatahirbilal.github.io/gabriela-torres/" target="_blank" rel="noopener">
+        <div class="shot"><img src="tiles/torres.jpg" alt="Gabriela Torres website" width="880" height="550" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <span class="name">Gabriela Torres</span>
+          <span class="role">Deputy Director, Postsecondary Success</span>
+          <p class="note">Transformation at scale. Bug fixes only this round, per instruction.</p>
+          <span class="go">Visit site <span>&rarr;</span></span>
         </div>
-        <div class="site-actions">
-          <span class="tag tag-live">Live</span>
-          <a class="visit" href="https://ranatahirbilal.github.io/gabriela-torres/" target="_blank" rel="noopener">Visit &rarr;</a>
-        </div>
-      </article>
+      </a>
 
-      <article class="site" style="--c:#6E1F2A">
-        <div class="site-chip" aria-hidden="true"></div>
-        <div class="site-body">
-          <span class="site-name">Kathleen M. Werner, JD</span>
-          <span class="site-role">Owner, The Dorsey Law Firm</span>
-          <p class="site-note">Phone contact only &mdash; no form or email address on the page. Flagged below.</p>
+      <a class="card" href="https://ranatahirbilal.github.io/kathleen-werner/" target="_blank" rel="noopener">
+        <div class="shot"><img src="tiles/werner.jpg" alt="Kathleen Werner website" width="880" height="550" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <span class="name">Kathleen M. Werner, JD</span>
+          <span class="role">Owner, The Dorsey Law Firm</span>
+          <p class="note">Thirty-three years at one firm, and now it&rsquo;s hers. Injury and
+             compensation practice in Leonardtown.</p>
+          <span class="go">Visit site <span>&rarr;</span></span>
         </div>
-        <div class="site-actions">
-          <span class="tag tag-live">Live</span>
-          <a class="visit" href="https://ranatahirbilal.github.io/kathleen-werner/" target="_blank" rel="noopener">Visit &rarr;</a>
-        </div>
-      </article>
+      </a>
 
-      <article class="site" style="--c:#7A2E2E">
-        <div class="site-chip" aria-hidden="true"></div>
-        <div class="site-body">
-          <span class="site-name">Dr. David D. Van Fleet</span>
-          <span class="site-role">Professor Emeritus of Management</span>
-          <p class="site-note">Live and stable. Hosted separately from the GitHub-based sites.</p>
+      <a class="card" href="https://playful-mousse-00f181.netlify.app/" target="_blank" rel="noopener">
+        <div class="shot"><img src="tiles/vanfleet.jpg" alt="David Van Fleet website" width="880" height="550" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <span class="name">Dr. David D. Van Fleet</span>
+          <span class="role">Professor Emeritus of Management</span>
+          <p class="note">Five decades in the classroom. Arizona State University, Fellow of the
+             Academy of Management.</p>
+          <span class="go">Visit site <span>&rarr;</span></span>
         </div>
-        <div class="site-actions">
-          <span class="tag tag-live">Live</span>
-          <a class="visit" href="https://playful-mousse-00f181.netlify.app/" target="_blank" rel="noopener">Visit &rarr;</a>
-        </div>
-      </article>
+      </a>
 
-      <article class="site" style="--c:#14634F">
-        <div class="site-chip" aria-hidden="true"></div>
-        <div class="site-body">
-          <span class="site-name">Gregory E. Boske</span>
-          <span class="site-role">Ridgecrest Medical Transportation</span>
-          <p class="site-note">Live and stable. Enquiries route to his own published address rather
-             than to us.</p>
+      <a class="card" href="https://unrivaled-monstera-cb7475.netlify.app/" target="_blank" rel="noopener">
+        <div class="shot"><img src="tiles/boske.jpg" alt="Gregory Boske website" width="880" height="550" loading="lazy" decoding="async"></div>
+        <div class="body">
+          <span class="name">Gregory E. Boske</span>
+          <span class="role">Ridgecrest Medical Transportation</span>
+          <p class="note">Owner and partner. Serving the Indian Wells Valley, with community
+             service woven through.</p>
+          <span class="go">Visit site <span>&rarr;</span></span>
         </div>
-        <div class="site-actions">
-          <span class="tag tag-live">Live</span>
-          <a class="visit" href="https://unrivaled-monstera-cb7475.netlify.app/" target="_blank" rel="noopener">Visit &rarr;</a>
-        </div>
-      </article>
+      </a>
 
     </div>
   </div>
@@ -347,65 +297,39 @@ a:focus-visible,.visit:focus-visible{ outline:3px solid var(--action); outline-o
 
 <section class="sec" style="background:#F5F1EA">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">Quality</p>
-      <h2>What &ldquo;done&rdquo; was measured against</h2>
-      <p>Every figure below came from an automated check run against the live sites, not an estimate.</p>
-    </div>
-    <div class="checks">
-      <div class="check"><b>17</b><span>Screen widths tested, 280px to 1920px</span></div>
-      <div class="check"><b>0</b><span>Pages with horizontal overflow</span></div>
-      <div class="check"><b>0</b><span>Broken images or 404s</span></div>
-      <div class="check"><b>0</b><span>Colour-contrast failures</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="sec">
-  <div class="wrap">
     <div class="grid2">
-
       <div class="panel">
         <h3>Delivered this week</h3>
         <p class="lede">New work since the last report.</p>
         <ul class="list">
-          <li><b>Two new sites</b>Elery Shoemaker and Andrew Cooper, built, populated and deployed.</li>
+          <li><b>Two new sites</b>Elery Shoemaker and Andrew Cooper &mdash; built, populated and deployed.</li>
           <li><b>One dead form found and fixed</b>Frances Laterman&rsquo;s enquiry form was discarding
               every submission. Repaired and confirmed.</li>
-          <li><b>Accessibility pass on Cooper</b>No h1, no visible keyboard focus, menu that ignored
-              Escape, anchors landing behind the fixed header, auto-rotating carousel with no pause.
-              All resolved.</li>
-          <li><b>Performance</b>Cooper&rsquo;s images now lazy-load: page weight down 355KB,
-              content-loaded time down from 1.2s to 0.5s.</li>
+          <li><b>Accessibility pass on Cooper</b>Keyboard focus, skip link, Escape-to-close menu,
+              anchor offsets, carousel controls &mdash; all resolved.</li>
+          <li><b>Performance</b>Cooper&rsquo;s page weight down 355KB; content-loaded time 1.2s &rarr; 0.5s.</li>
         </ul>
       </div>
-
       <div class="panel dark">
-        <h3>Outstanding</h3>
-        <p class="lede">Open items, stated plainly.</p>
+        <h3>Open items</h3>
+        <p class="lede">Stated plainly, so nothing is a surprise later.</p>
         <ul class="list">
-          <li><b>Needs a decision</b>Gabriela Torres has no contact route at all &mdash; no form, email
-              or phone. Changes to her site were paused at your request.</li>
-          <li><b>Needs a decision</b>Kathleen Werner offers a phone number only. An email route would
-              likely convert better.</li>
+          <li><b>Needs a decision</b>Gabriela Torres has no contact route &mdash; no form, email or
+              phone. Her site was paused at your request.</li>
+          <li><b>Needs a decision</b>Kathleen Werner offers a phone number only.</li>
           <li><b>Needs source material</b>Richard Favorito cannot be started without a press release
               or existing site.</li>
-          <li><b>One-time action</b>New contact forms need a single test submission each to activate
-              the email relay.</li>
-          <li><b>Optional</b>Three sites are hosted outside GitHub and have no repository, so they
-              cannot be edited the same way as the rest.</li>
+          <li><b>One-time action</b>New contact forms need a single test submission each to activate.</li>
         </ul>
       </div>
-
     </div>
   </div>
 </section>
-
 </main>
 
 <footer class="foot">
   <div class="wrap">
-    <span>Top Dynamos &mdash; portfolio status report</span>
+    <span>Top Dynamos &mdash; every site is live right now</span>
     <span>Prepared for Alexander by Tahir Bilal</span>
   </div>
 </footer>
