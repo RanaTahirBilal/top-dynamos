@@ -353,5 +353,33 @@ a:focus-visible{ outline:3px solid var(--action); outline-offset:3px; border-rad
   document.getElementById('today').textContent =
     new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
 </script>
+
+<script>
+/* Seven of the twelve tiles were downloading and never painting: the files
+   returned 200 while the elements reported naturalWidth 0. Native
+   loading="lazy" does this often enough that it needs a safety net —
+   watch each image and load it outright as it approaches, with a timed
+   sweep behind it so nothing on the portfolio page can stay blank. */
+(function () {
+  var lazies = [].slice.call(document.querySelectorAll('img[loading="lazy"]'));
+  if (!lazies.length) { return; }
+  function wake(img) {
+    if (img.dataset.tdWoke) { return; }
+    img.dataset.tdWoke = '1';
+    img.removeAttribute('loading');
+    var src = img.getAttribute('src');
+    if (src && !img.complete) { img.src = src; }
+  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { wake(e.target); io.unobserve(e.target); } });
+    }, { rootMargin: '800px 0px' });
+    lazies.forEach(function (i) { io.observe(i); });
+  } else { lazies.forEach(wake); }
+  window.setTimeout(function () {
+    lazies.forEach(function (i) { if (!i.complete || !i.naturalWidth) { wake(i); } });
+  }, 3000);
+}());
+</script>
 </body>
 </html>
